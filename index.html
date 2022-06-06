@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accueil</title>
+</head>
+<body>
+    <div class="sep">
+        <div class="content_sep">
+            <h3>Register</h3>
+            <p>if you don't have an account, you can create one here to start and Practice investing !</p>
+            <button onclick="func()">Register</button>
+        </div>
+
+        <div class="left_content_sep cache">
+            <h3>Login</h3>
+            <p>Hi ! <br> I'm glad to see you again ! <br> Log in to pick up where you left off !</p>
+            <button onclick="func()">Login</button>
+        </div>
+    </div>
+    <div id="acacher2" class="content_left cache">
+        <div>
+            <center>
+                <img src="https://cdn.discordapp.com/attachments/955922541514465340/983374252071850054/CRYPTEST_logo_3.png" alt="Cryptest Practice investing">
+            </center>
+            
+            <br>
+
+            <input class="input_regist" type="text" placeholder="Username"> <br>
+            <input class="input_regist" type="text" placeholder="Email"> <br>
+            <input class="input_regist" type="text" placeholder="Age"> <br>
+            <input class="input_regist" type="text" placeholder="Password"> <br>
+            <input class="input_regist" type="password" placeholder="Confirm Password">
+
+            <center>
+                <button class="button_login">Login</button>
+            </center>
+        </div>
+    </div>
+
+    <div id="acacher1" class="content_right">
+        <div>
+            <center>
+                <img src="https://cdn.discordapp.com/attachments/955922541514465340/983374252071850054/CRYPTEST_logo_3.png" alt="Cryptest Practice investing">
+            </center>
+            
+            <br>
+
+            <input class="input_login" placeholder="Username or email" type="text"> <br>
+            <input class="input_login" placeholder="Password" type="password">
+
+            <center>
+                <button class="button_login">Login</button>
+            </center>
+        </div>
+    </div>
+
+    <script>
+        const sep = document.querySelector('.sep')
+        const content_sep = document.querySelector('.content_sep')
+        const content_sep_right = document.querySelector('.left_content_sep')
+        const cache1 = document.querySelector('#acacher1') 
+        const cache2 = document.querySelector('#acacher2') 
+  
+        function func () {
+            if (sep.classList.contains('left')) {
+            sep.classList.remove('left')
+            content_sep.classList.remove('cache')
+            content_sep_right.classList.add('cache')
+            cache1.classList.remove('cache')
+            cache2.classList.add('cache')
+
+            } 
+            else {
+            sep.classList.add('left')
+            content_sep.classList.add('cache')
+            content_sep_right.classList.remove('cache')
+            cache1.classList.add('cache')
+            cache2.classList.remove('cache')
+
+            }
+        }
+    </script>
+    
+</body>
+</html>
